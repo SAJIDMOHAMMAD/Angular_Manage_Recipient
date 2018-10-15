@@ -1,0 +1,33 @@
+<div>
+ <h1 >Administrar Destinatarios</h1>
+</div>
+
+<h3>Mis Destinatarios (3)</h3>   <a routerLink="/enter-add"><button id="add" class="btn"> Add </button></a>
+
+<div class="table-container">
+<table id="manageRecipientList">
+    <thead>  
+        <tr>
+        <th>Name</th>
+        <th>RUT</th>
+        <th>Banco Destino</th>
+        <th>N<sup>o</sup> de Cuenta</th>
+        <th>Email</th>
+        <th></th>
+        </tr>
+     </thead>
+     <tbody>
+      
+       <tr *ngFor="let recipient of recipientsList">
+         <td>{{recipient.name}}</td>
+          <td>{{recipient.RUT}}</td>
+           <td>{{recipient.bank}}</td>
+            <td>{{recipient.accountNumber}}</td>
+             <td>{{recipient.email}}</td>
+             <td><button id="transfer" type="submit"> Transfer </button>
+           <button id="delete" type="submit"> Delete </button>
+          <a routerLink="/edit"> <button id="edit" class="btn"> Edit </button></a></td></tr>
+      
+      
+ </tbody>
+</table>

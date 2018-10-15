@@ -1,0 +1,12 @@
+<h3>Confirm Recipient</h3>
+<label for="bank">Bank</label>{{selectedRecipient.bank}}<br/>
+<label for="name">Name</label>{{selectedRecipient.name}}<br/>
+<label for="RUT">RUT</label>{{selectedRecipient.RUT}}<br/>
+<label for="email">Email</label>{{selectedRecipient.email}}<br/>
+<label for="accountNumber">Account Number</label>{{selectedRecipient.accountNumber}}<br/>
+<a routerLink="/enter-add">
+    <button type="button" id="back" class="btn btn-default" >Back</button>
+  </a> 
+  <a routerLink="/">
+    <button type="button" id="next" class="btn btn-default" (click)="confirmAddRecipient()">Confirm</button>
+  </a>
